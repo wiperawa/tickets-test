@@ -6,7 +6,7 @@ import {addTicketAction} from "./actions";
 
 function App({dispatch}) {
     const addTicket = () => {
-        dispatch(addTicketAction({name: 'test', price: 10000, transfers: 3}))
+        dispatch(addTicketAction({name: 'test costing some', cost: 10000, transfers: 3}))
     }
   return (
     <div className="App">
@@ -15,7 +15,14 @@ function App({dispatch}) {
       </header>
       <div className="App-container container">
           <button className="btn btn-info" onClick={addTicket}>Add Ticket</button>
-        <TicketsList />
+          <div className="row">
+              <div className="col-2">
+                  test
+              </div>
+                <div className="col-md-10 col-12">
+                    <TicketsList />
+                </div>
+          </div>
       </div>
     </div>
   );
