@@ -5,6 +5,7 @@ import TicketsList from "./components/TicketsList";
 import {useState} from "react";
 import AddTicketModal from "./components/AddTicketModal";
 import SortingRow from "./components/SortingRow";
+import Filters from "./components/Filters";
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
                 <button className="btn btn-info" onClick={openModal}>Add Ticket</button>
                 <div className="row mt-4">
                     <div className="col-md-3 filters-row">
-
+                        <Filters/>
                     </div>
                     <div className="col-md-9">
                         <SortingRow />

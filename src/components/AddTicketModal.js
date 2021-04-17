@@ -101,7 +101,6 @@ function AddTicketModal({show, handleClose, dispatch})
                         </Form>
                     )
                 }
-
             </Formik>
         </Modal>
     )
