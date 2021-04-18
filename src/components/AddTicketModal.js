@@ -6,7 +6,7 @@ import {addTicketAction} from "../actions";
 
 function AddTicketModal({show, handleClose, dispatch})
 {
-    const initialFields = {company: 'Utair', price: '', transfers: ''};
+    const initialFields = {company: 'Utair', price: '', transfers: 0};
 
     const schema = yup.object({
         company: yup.string().required(),

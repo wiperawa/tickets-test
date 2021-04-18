@@ -5,9 +5,9 @@ import Ticket from "./Ticket";
 function TicketsList({tickets, dispatch})
 {
 
-    return ( tickets.length ?
+    return (tickets.length ?
         tickets.map((ticket, idx) => (<Ticket key={idx} ticket={ticket} />)) :
-            <div className="text-center text-white">There is no tickets available</div>
+            <div className="text-center">There is no tickets available</div>
     )
 }
 

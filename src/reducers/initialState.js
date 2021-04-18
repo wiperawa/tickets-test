@@ -12,7 +12,5 @@ const tickets = localStorage.getItem('ticketsList') ? JSON.parse(localStorage.ge
 export  const initialState = {
     tickets: [...tickets],
     sorting: PRICE_ASC,
-    filter: {
-        transfers: ALL_TRANSFERS
-    }
+    filters: [ALL_TRANSFERS]
 }
