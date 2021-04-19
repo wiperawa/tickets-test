@@ -1,4 +1,4 @@
-import {ADD_TICKET, CHANGE_FILTER, CHANGE_SORTING} from "../actions";
+import {ADD_TICKET, TOGGLE_FILTER, CHANGE_SORTING} from "../actions";
 import {ALL_TRANSFERS, initialState, PRICE_ASC} from "./initialState";
 
 const sortTickets = (tickets, order) => tickets.sort(
@@ -44,7 +44,7 @@ export default function reducer (state = initialState, action)
         case ADD_TICKET:
             newState = {...state, tickets: [...state.tickets, action.ticket]}
             break;
-        case CHANGE_FILTER:
+        case TOGGLE_FILTER:
             const newFilters = toggleFilter(state.filters, action.filter);
             newState = {...state, filters: [...newFilters]}
             break;

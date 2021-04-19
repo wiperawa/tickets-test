@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import ticketsListMapStateToProps from "../store/mappers/ticketsList";
 import Ticket from "./Ticket";
 
-function TicketsList({tickets, dispatch})
+function TicketsList({tickets})
 {
 
     return (tickets.length ?

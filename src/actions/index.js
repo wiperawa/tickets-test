@@ -1,8 +1,8 @@
 export const ADD_TICKET = 'ADD_TICKET';
-export const CHANGE_FILTER = 'CHANGE_FILTER';
+export const TOGGLE_FILTER = 'TOGGLE_FILTER';
 export const CHANGE_SORTING = 'CHANGE_SORTING';
 
-const safeTicketToLocalStorage = (ticket) =>
+const saveTicketToLocalStorage = (ticket) =>
 {
     let tickets = localStorage.getItem('ticketsList') ? JSON.parse(localStorage.getItem('ticketsList')) : [];
     tickets.push(ticket);
@@ -11,19 +11,19 @@ const safeTicketToLocalStorage = (ticket) =>
 
 export const addTicketAction = (ticket) =>
 {
-    safeTicketToLocalStorage(ticket);
+    saveTicketToLocalStorage(ticket);
     return {
         type: ADD_TICKET,
         ticket: ticket
     }
 };
 
-export const changeFilter = (filter) => ({
-    type: CHANGE_FILTER,
+export const toggleFilterAction = (filter) => ({
+    type: TOGGLE_FILTER,
     filter: filter
 })
 
-export const changeSorting = (sorting) => ({
+export const changeSortingAction = (sorting) => ({
     type: CHANGE_SORTING,
     sorting: sorting
 })

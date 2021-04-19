@@ -2,14 +2,12 @@ import {connect} from "react-redux";
 import FiltersMapStateToProps from "../store/mappers/Filters";
 import {Card, Form} from "react-bootstrap";
 import {ALL_TRANSFERS, NO_TRANSFERS, ONE_TRANSFER, TWO_TRANSFERS, THREE_TRANSFERS} from "../reducers/initialState";
-import {changeFilter} from "../actions";
+import {toggleFilterAction} from "../actions";
 
 function Filters ({filters, dispatch})
 {
-
-    console.log(filters);
     const toggleFilter = (filter) => {
-        dispatch(changeFilter(filter));
+        dispatch(toggleFilterAction(filter));
     }
     return (
         <div className="col">
@@ -18,6 +16,7 @@ function Filters ({filters, dispatch})
                     Filter:
                 </Card.Header>
                 <Card.Body className="text-left">
+
                     <Form.Check
                         type="checkbox"
                         value="all"
